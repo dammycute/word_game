@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 5px;
+}
+
+.grid div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.grid div.selected {
+    background-color: #f0c040;
+}
+
+.grid div.found {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#word-list li.found {
+    text-decoration: line-through;
+    color: green;
+}
